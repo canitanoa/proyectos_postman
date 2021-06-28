@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "ff402ca8-3331-4d5b-bc77-307fe6f47dbb",
+		"name": "getway-zuul",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/items/listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/items/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"items",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/items/obtener-config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/items/obtener-config",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"items",
+						"obtener-config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/items/ver/{id}/cantidad/{cantidad}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/items/ver/2/cantidad/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"items",
+						"ver",
+						"2",
+						"cantidad",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/productos/listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/productos/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/productos/ver/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/productos/ver/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"ver",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "06be236c-fe94-4bcf-b77a-434d12612a47",
+		"name": "servicio-items (por config-server)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROD}}/listar",
+					"host": [
+						"{{PROD}}"
+					],
+					"path": [
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{DESA}}/actuator/refresh",
+					"host": [
+						"{{DESA}}"
+					],
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				},
+				"description": "Actualiza la configuracion realizada en las properties en el servidor de configuración \"config-server\" que fueron previamente modificadas y subidas al repositorio de GIT.\nEsto lo hace sin tener que reiniciar el servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "/obtener-config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DESA}}/obtener-config",
+					"host": [
+						"{{DESA}}"
+					],
+					"path": [
+						"obtener-config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ver/{id}/cantidad/{cantidad}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DESA}}/ver/2/cantidad/1",
+					"host": [
+						"{{DESA}}"
+					],
+					"path": [
+						"ver",
+						"2",
+						"cantidad",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "DESA",
+			"value": "http://localhost:8005"
+		},
+		{
+			"key": "PROD",
+			"value": "http://localhost:8007"
+		}
+	]
+}
