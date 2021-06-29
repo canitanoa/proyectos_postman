@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:50104/listar",
+					"raw": "http://localhost:56379/listar",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "50104",
+					"port": "56379",
 					"path": [
 						"listar"
 					]
@@ -30,12 +30,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:50104/ver/9",
+					"raw": "http://localhost:56379/ver/9",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "50104",
+					"port": "56379",
 					"path": [
 						"ver",
 						"9"

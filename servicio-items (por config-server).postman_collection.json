@@ -23,18 +23,91 @@
 			"response": []
 		},
 		{
+			"name": "/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Calculadora\",\r\n    \"precio\":1500,\r\n    \"createAt\":\"2021-06-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROD}}/crear",
+					"host": [
+						"{{PROD}}"
+					],
+					"path": [
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "/actuator/refresh",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{DESA}}/actuator/refresh",
+					"raw": "{{PROD}}/actuator/refresh",
 					"host": [
-						"{{DESA}}"
+						"{{PROD}}"
 					],
 					"path": [
 						"actuator",
 						"refresh"
+					]
+				},
+				"description": "Actualiza la configuracion realizada en las properties en el servidor de configuración \"config-server\" que fueron previamente modificadas y subidas al repositorio de GIT.\nEsto lo hace sin tener que reiniciar el servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "/editar/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Auricular\",\r\n    \"precio\": 802.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROD}}/editar/1",
+					"host": [
+						"{{PROD}}"
+					],
+					"path": [
+						"editar",
+						"1"
+					]
+				},
+				"description": "Actualiza la configuracion realizada en las properties en el servidor de configuración \"config-server\" que fueron previamente modificadas y subidas al repositorio de GIT.\nEsto lo hace sin tener que reiniciar el servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "/eliminar/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{PROD}}/eliminar/11",
+					"host": [
+						"{{PROD}}"
+					],
+					"path": [
+						"eliminar",
+						"11"
 					]
 				},
 				"description": "Actualiza la configuracion realizada en las properties en el servidor de configuración \"config-server\" que fueron previamente modificadas y subidas al repositorio de GIT.\nEsto lo hace sin tener que reiniciar el servicio"
@@ -47,9 +120,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{DESA}}/obtener-config",
+					"raw": "{{PROD}}/obtener-config",
 					"host": [
-						"{{DESA}}"
+						"{{PROD}}"
 					],
 					"path": [
 						"obtener-config"
@@ -64,15 +137,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{DESA}}/ver/2/cantidad/1",
+					"raw": "{{PROD}}/ver/1/cantidad/2",
 					"host": [
-						"{{DESA}}"
+						"{{PROD}}"
 					],
 					"path": [
 						"ver",
-						"2",
+						"1",
 						"cantidad",
-						"1"
+						"2"
 					]
 				}
 			},

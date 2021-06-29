@@ -72,6 +72,36 @@
 			"response": []
 		},
 		{
+			"name": "/api/items/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Calculadore\",\r\n    \"precio\":987,\r\n    \"createAt\":\"2021-06-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/items/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"items",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "/api/productos/listar",
 			"request": {
 				"method": "GET",
@@ -98,7 +128,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/api/productos/ver/3",
+					"raw": "http://localhost:8090/api/productos/ver/10",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -108,7 +138,90 @@
 						"api",
 						"productos",
 						"ver",
-						"3"
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/productos/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Termo\",\r\n    \"precio\":5500,\r\n    \"createAt\":\"2021-06-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/productos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/productos/editar/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Termo\",\r\n    \"precio\":9000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/productos/editar/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"editar",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/productos/eliminar/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/productos/eliminar/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"eliminar",
+						"10"
 					]
 				}
 			},
