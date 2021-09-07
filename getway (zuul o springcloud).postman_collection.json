@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "ff402ca8-3331-4d5b-bc77-307fe6f47dbb",
-		"name": "getway-zuul",
+		"name": "getway (zuul o springcloud)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -81,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\":\"Calculadora\",\r\n    \"precio\":200,\r\n    \"createAt\":\"2021-06-29\"\r\n}",
+							"raw": "{\r\n    \"nombre\":\"Regla\",\r\n    \"precio\":58,\r\n    \"createAt\":\"2021-06-29\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -111,7 +111,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Calculadora\",\r\n    \"precio\": 201.0\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Regla\",\r\n    \"precio\": 11.0\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -119,7 +119,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8090/api/items/editar/14",
+							"raw": "http://localhost:8090/api/items/editar/18",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -129,7 +129,7 @@
 								"api",
 								"items",
 								"editar",
-								"14"
+								"18"
 							]
 						},
 						"description": "Actualiza la configuracion realizada en las properties en el servidor de configuración \"config-server\" que fueron previamente modificadas y subidas al repositorio de GIT.\nEsto lo hace sin tener que reiniciar el servicio"
@@ -285,6 +285,115 @@
 								"productos",
 								"eliminar",
 								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "api/usuarios/usu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/usuarios/usu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"usuarios",
+								"usu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/usuarios/usu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"vaca\",\r\n    \"password\": \"123456\",\r\n    \"nombre\": \"Vaca\",\r\n    \"apellido\": \"Vaquita\",\r\n    \"email\": \"vaqui@gmail.com\",\r\n    \"enabled\": true,\r\n    \"roles\": [\r\n        {\r\n            \"id\":\"1\",\"nombre\": \"ROLE_USER\"\r\n        },        \r\n        {\r\n            \"id\":\"2\",\"nombre\": \"ROLE_ADMIN\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/usuarios/usu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"usuarios",
+								"usu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/usuarios/usu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"vaca\",\r\n    \"password\": \"123457\",\r\n    \"nombre\": \"Vaca\",\r\n    \"apellido\": \"Vaquita\",\r\n    \"email\": \"vaqui@gmail.com\",\r\n    \"enabled\": true,\r\n    \"roles\": [\r\n        {\r\n            \"id\":\"1\",\"nombre\": \"ROLE_USER\"\r\n        },        \r\n        {\r\n            \"id\":\"2\",\"nombre\": \"ROLE_ADMIN\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/usuarios/usu/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"usuarios",
+								"usu",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/usuarios/usu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/usuarios/usu/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"usuarios",
+								"usu",
+								"5"
 							]
 						}
 					},
